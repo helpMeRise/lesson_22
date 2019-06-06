@@ -5,11 +5,13 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Урок 22</title>
+  <title>Урок 22(усложненное)</title>
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/animate.min.css">
   <link rel="stylesheet" href="css/slick.css">
   <link rel="stylesheet" href="css/style.css">
+  <script src="https://api-maps.yandex.ru/2.1/?apikey=<2d4d8ee1-14f8-4d83-b829-c880e5283dd5>&lang=ru_RU" type="text/javascript">
+  </script>
 </head>
 
 <body>
@@ -405,13 +407,12 @@
 
   </div>
 
-
   <!--Подвал-->
   <footer class="footer">
 
     <!--Карта-->
-    <div class="map">
-      <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A114d3eb4d1680b26a069e6412a7102973f0bf72f6c99f019d48be4101695e679&amp;width=100%25&amp;height=640&amp;lang=ru_RU&amp;scroll=false"></script>
+    <div class="map" id="map">
+     
     </div>
     <div class="container">
       <div class="footer-block">
@@ -479,7 +480,26 @@
   <script src="js/slick.min.js"></script>
   <script src="js/jquery.validate.min.js"></script>
   <script src="js/jquery.maskedinput.js"></script>
-
+  <script src="js/map.js"></script>
+  
+ <!-- <script type="text/javascript">
+    // Функция ymaps.ready() будет вызвана, когда
+    // загрузятся все компоненты API, а также когда будет готово DOM-дерево.
+    ymaps.ready(init);
+    function init(){ 
+        // Создание карты.    
+        var myMap = new ymaps.Map("map", {
+            // Координаты центра карты.
+            // Порядок по умолчанию: «широта, долгота».
+            // Чтобы не определять координаты центра карты вручную,
+            // воспользуйтесь инструментом Определение координат.
+            center: [55.76, 37.64],
+            // Уровень масштабирования. Допустимые значения:
+            // от 0 (весь мир) до 19.
+            zoom: 7
+        });
+    } -->
+</script>
   <script>
     $(".phone").mask("8(999) 999-99-99");
   </script>
